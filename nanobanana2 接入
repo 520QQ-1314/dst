@@ -1,0 +1,19 @@
+import httpx
+
+def generate_image(state):
+    prompt = state["prompt"]
+
+    # 👉 免费API占位（你可以替换 GitHub 开源项目）
+    response = httpx.post(
+        "https://api.nanobanana2.com/generate",
+        json={
+            "prompt": prompt,
+            "size": "1024x1024"
+        }
+    )
+
+    data = response.json()
+
+    return {
+        "image_url": data.get("url", "")
+    }
