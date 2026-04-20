@@ -1,0 +1,18 @@
+def prompt_agent(state):
+    prompt = f"""
+Convert structured design into ONE image generation prompt.
+
+Rules:
+- no JSON
+- no brand copying
+- high-end advertising style
+- cinematic quality
+
+DATA:
+Intent: {state['intent']}
+Concept: {state['concept']}
+Layout: {state['layout']}
+Style: {state['style']}
+"""
+    res = llm.invoke(prompt)
+    return {"prompt": res.content}
