@@ -1,0 +1,29 @@
+ai-poster-agent/
+│
+├── backend/
+│   ├── app.py                  # FastAPI入口
+│   ├── graph.py               # LangGraph核心
+│   ├── agents/
+│   │   ├── intent.py
+│   │   ├── director.py
+│   │   ├── layout.py
+│   │   ├── style.py
+│   │   ├── prompt.py
+│   │   ├── critic.py
+│   │
+│   ├── tools/
+│   │   ├── nanobanana.py      # 图像模型API
+│   │   ├── safe_prompt.py     # 版权过滤
+│   │   ├── free_assets.py     # 免费资源调用
+│   │
+│   ├── config.py
+│
+├── frontend/
+│   ├── nextjs-app/
+│
+├── prompts/
+│   ├── luxury_style.json
+│   ├── fashion_style.json
+│
+├── README.md
+└── requirements.txt
