@@ -1,0 +1,12 @@
+from fastapi import FastAPI
+from graph import app
+
+api = FastAPI()
+
+@api.post("/generate")
+def generate(data: dict):
+    result = app.invoke({
+        "user_input": data["text"]
+    })
+
+    return result
