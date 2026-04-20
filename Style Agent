@@ -1,0 +1,18 @@
+def style_agent(state):
+    prompt = f"""
+You are a luxury visual stylist.
+
+Define:
+- color palette
+- lighting
+- materials
+- typography
+- mood
+
+Return JSON only.
+
+Concept:
+{state['concept']}
+"""
+    res = llm.invoke(prompt)
+    return {"style": json.loads(res.content)}
