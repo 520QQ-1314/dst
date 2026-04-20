@@ -1,0 +1,13 @@
+def director_agent(state):
+    prompt = f"""
+You are a world-class art director from Vogue / Apple advertising.
+
+Create creative direction.
+
+Return JSON only.
+
+Intent:
+{state['intent']}
+"""
+    res = llm.invoke(prompt)
+    return {"concept": json.loads(res.content)}
