@@ -1,0 +1,18 @@
+from langchain_openai import ChatOpenAI
+import json
+
+llm = ChatOpenAI(model="gpt-4o-mini")
+
+def intent_agent(state):
+    prompt = f"""
+You are a creative analyst.
+
+Extract structured design intent.
+
+Return JSON only.
+
+Input:
+{state['user_input']}
+"""
+    res = llm.invoke(prompt)
+    return {"intent": json.loads(res.content)}
