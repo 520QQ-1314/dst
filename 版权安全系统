@@ -1,0 +1,9 @@
+BANNED = [
+    "disney", "marvel", "lv logo", "gucci logo",
+    "celebrity face", "trademark brand copy"
+]
+
+def filter_prompt(prompt: str):
+    for b in BANNED:
+        prompt = prompt.replace(b, "")
+    return prompt
