@@ -1,0 +1,15 @@
+def get_free_assets():
+    return {
+        "fonts": [
+            "Google Fonts (inter, playfair display)",
+            "SIL Open Font License fonts"
+        ],
+        "images": [
+            "unsplash.com API",
+            "pexels.com API"
+        ],
+        "icons": [
+            "lucide icons",
+            "heroicons"
+        ]
+    }
